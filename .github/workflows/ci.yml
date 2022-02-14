@@ -1,0 +1,12 @@
+name: ci
+on:
+ workflow_dispatch:
+jobs:
+  job1:
+    uses: ./.github/workflows/reusable.yml
+    with:
+      username: mona     
+  job2:
+    uses: ./.github/workflows/reusable.yml
+    with:
+      username: thecat
