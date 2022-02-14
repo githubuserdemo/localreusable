@@ -3,10 +3,10 @@ on:
  workflow_dispatch:
 jobs:
   job1:
-    uses: githubuserdemo/localreusable/.github/workflows/reusable.yml@main
+    uses: ./.github/workflows/reusable.yml
     with:
       username: mona     
   job2:
-    uses: githubuserdemo/localreusable/.github/workflows/reusable.yml@main
+    uses: ./.github/workflows/reusable.yml
     with:
       username: thecat
