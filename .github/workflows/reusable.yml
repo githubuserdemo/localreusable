@@ -1,0 +1,18 @@
+name: reusable
+on:
+  workflow_call:
+    inputs:
+      username:
+        required: false
+        type: string
+jobs:
+  test:
+    runs-on: [ubuntu-latest]
+    steps:
+      - run: echo "test job"
+  deploy:
+    runs-on: [ubuntu-latest]
+    needs: test
+    steps:
+      - run: echo "deploy job"
+
